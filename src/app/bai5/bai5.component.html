@@ -1,0 +1,73 @@
+<div class="container-field pt-5">
+    <div id="left" class="float-left">
+        <a href="#"><i class=" float-right mr-2 pt-2	fas fa-align-justify" style="font-size: 26px;"></i></a>
+        <br>
+        <br>
+        <br>
+        <img src="../../assets/BS.png" class="ml-5">
+        <br><br>
+        <a href="#"><i class="fas fa-home  "> Home</i></a>
+        <a href="#"><i class="fas fa-user  "> Employees</i></a>
+        <a href="#"><i class="fas fa-file  "> Project</i></a>
+        <a href="#"><i class="fas fa-user-graduate  "> Skills</i></a>
+        <a href="#"><i class="fas fa-book-reader  "> Interns</i></a>
+        <a href="#"><i class="fas fa-bookmark  "> Topics</i></a>
+        <a href="#"><i class="fas fa-book  "> Courses</i></a>
+        <a href="#"><i class="fas fa-bookmark  "> Topic-Course</i></a>
+        <a href="#"><i class="fas fa-book-medical  "> Classes</i></a>
+    </div>
+    <div id="right" class="float-right">
+        <div>
+            <a href="#">Home</a>/ <a href="#">Skills</a>
+            <br><br>
+            <div class="row">
+                <div class="col-3">
+                    <div class="float-left" style="padding-left: 20px; font-size: 30px;">Show:</div>
+                    <div class="form-group float-right" style="width:60px;">
+                        <select class="form-control" id="sel1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-8">
+                    <button class="btn btn-primary mr-2">Excel</button>
+                    <button class="btn btn-primary mr-2">PDF</button>
+                    <input type="text" placeholder="Sreach.." class="mr-2" style="font-size: 20px;">
+                    <button class="btn btn-primary">+ Add Employees</button>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </thead>
+            <tbody *ngFor='let sv of svs'>
+                <tr>
+                    <td>{{ sv.id }}</td>
+                    <td>{{ sv.firstName }}</td>
+                    <td>{{ sv.lastName }}</td>
+                    <td>{{ sv.email }}</td>
+                    <td>
+                        <i class="fas fa-exclamation mr-3"></i>
+                        <i class="fas fa-pencil-alt mr-3"></i>
+                        <i class="fas fa-trash-alt mr-1"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul class="pagination justify-content-end">
+            <li class="page-item"><a class="page-link" href="javascript:void(0);" style="font-size: 15px;">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);" style="font-size: 15px;">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);" style="font-size: 15px;">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);" style="font-size: 15px;">Next</a></li>
+        </ul>
+    </div>
+</div>

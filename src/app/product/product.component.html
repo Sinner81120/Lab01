@@ -1,36 +1,61 @@
-<div class="card">
+<div id="tb" class="card">
+    <div class="card-header">{{name}}</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <div>Name: {{name}} </div> <br>
+                <div>Code: {{code}} </div> <br>
+                <div>Descriptione: {{des}} </div> <br>
+                <div>Availability: {{avai}} </div> <br>
+                <div>Price: {{pri}} </div> <br>
+                <div>5 Star Rating: {{star}} </div>
+            </div>
+            <div class="col-7">
+                <img src="{{urli}}" alt="" style="width: 300px;height: auto;">
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-primary"> <<< Back </button>
+    </div>
+</div>
+
+
+<div class="card mt-5">
     <div class="card-header bg-primary text-white">Product list</div>
     <div class="card-body">
         <form>
-            <label for="input" style="padding-right:40px;">Filter: </label>
-            <input type="text">
+            <label for="input" style="padding-right:40px;" for="exampleFormControlInput1"> Filter: </label>
+            <input type="text" id="exampleFormControlInput1" [(ngModel)]="searchText" name="filter">
         </form>
-        <div class="table-responsive">
+        <div class="table-responsive" id="searchTextResults">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>
+                        <th scope="col">
                             <button class="btn btn-primary" (click)="toggle()">{{buttonName}} Image</button>
                         </th>
-                        <th>Products</th>
-                        <th>Code</th>
-                        <th>Available</th>
-                        <th>Price</th>
-                        <th>5 Star Rating</th>
+                        <th scope="col">Products</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Available</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">5 Star Rating</th>
                     </tr>
                 </thead>
-                <tbody *ngFor="let product of products">
-                    <tr>
+                <tbody>
+                    <tr *ngFor="let product of products |filter:searchText">
                         <td *ngIf="show, else hide"><img src="{{product.url}}"></td>
                         <ng-template #hide>
                             <td></td>
                         </ng-template>
-                        <td>{{product.productName}}</td>
+                        <td><a href="#">{{product.productName}}</a></td>
                         <td>{{product.productCode}}</td>
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price}}</td>
                         <td>
-                            {{product.starRating}}
+                            <star-rating value="{{product.starRating}}" checkedcolor="black" uncheckedcolor="grey" size="24px"></star-rating>
+
                         </td>
                     </tr>
                 </tbody>
