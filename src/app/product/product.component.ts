@@ -15,7 +15,7 @@ export class ProductComponent implements OnInit {
   pri = "$19.95";
   star = 3;
   urli = "../../assets/leaf-rake.jpg";
-  
+  searchText ="";
   products = [
         {
           url:"../../assets/leaf-rake.jpg",
