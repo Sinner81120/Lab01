@@ -1,27 +1,3 @@
-<div id="tb" class="card">
-    <div class="card-header">{{name}}</div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col-4">
-                <div>Name: {{name}} </div> <br>
-                <div>Code: {{code}} </div> <br>
-                <div>Descriptione: {{des}} </div> <br>
-                <div>Availability: {{avai}} </div> <br>
-                <div>Price: {{pri}} </div> <br>
-                <div>5 Star Rating: {{star}} </div>
-            </div>
-            <div class="col-7">
-                <img src="{{urli}}" alt="" style="width: 300px;height: auto;">
-            </div>
-        </div>
-    </div>
-    <div class="card-footer">
-        <button class="btn btn-primary"> <<< Back </button>
-    </div>
-</div>
-
-
 <div class="card mt-5">
     <div class="card-header bg-primary text-white">Product list</div>
     <div class="card-body">
@@ -45,17 +21,16 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let product of products |filter:searchText">
-                        <td *ngIf="show, else hide"><img src="{{product.url}}"></td>
+                        <td *ngIf="show, else hide"><img src="{{product.imageUrl}}"></td>
                         <ng-template #hide>
                             <td></td>
                         </ng-template>
-                        <td><a href="#">{{product.productName}}</a></td>
+                        <td><a [routerLink]="['/detail',product.productId]">{{product.productName}}</a></td>
                         <td>{{product.productCode}}</td>
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price}}</td>
                         <td>
                             <star-rating value="{{product.starRating}}" checkedcolor="black" uncheckedcolor="grey" size="24px"></star-rating>
-
                         </td>
                     </tr>
                 </tbody>

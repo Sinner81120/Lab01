@@ -1,22 +1,2 @@
-<button data-toggle="collapse" data-target="#home" class="btn-primary">Home</button>
-<button data-toggle="collapse" data-target="#demo" class="btn-primary">Bài 1</button>
-<button data-toggle="collapse" data-target="#demo1" class="btn-primary">Bài 2</button>
-<button data-toggle="collapse" data-target="#demo2" class="btn-primary">Bài 3</button>
-<button data-toggle="collapse" data-target="#demo4" class="btn-primary">Bài 4</button>
-<button data-toggle="collapse" data-target="#demo3" class="btn-primary">Bài 5</button>
-
-<div id="demo4" class="collapse">
-    <app-product></app-product>
-</div>
-<div id="demo" class="collapse">
-    <app-bai1></app-bai1>
-</div>
-<div id="demo1" class="collapse">
-    <app-bai2></app-bai2>
-</div>
-<div id="demo2" class="collapse">
-    <app-bai3></app-bai3>
-</div>
-<div id="demo3" class="collapse">
-    <app-bai5></app-bai5>
-</div>
+<a [routerLink]="['/product']">Product</a>
+<router-outlet></router-outlet>

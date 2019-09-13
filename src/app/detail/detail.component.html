@@ -1,0 +1,22 @@
+<div id="tb" class="card">
+    <div class="card-header">{{product.productName}}</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <div>Name: {{product.productName}} </div> <br>
+                <div>Code: {{product.productCode}} </div> <br>
+                <div>Descriptione: {{product.description}} </div> <br>
+                <div>Availability: {{product.releaseDate}} </div> <br>
+                <div>Price: {{product.price}} </div> <br>
+                <div>5 Star Rating: {{product.starRating}} </div>
+            </div>
+            <div class="col-7">
+                <img src="{{product.imageUrl}}" alt="" style="width: 300px;height: auto;">
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-primary" (click)='fuck()'>  Back</button>
+    </div>
+</div>
