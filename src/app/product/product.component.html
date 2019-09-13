@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of products |filter:searchText">
+                    <tr *ngFor="let product of products | filter:searchText">
                         <td *ngIf="show, else hide"><img src="{{product.imageUrl}}"></td>
                         <ng-template #hide>
                             <td></td>
