@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SinhvienComponent implements OnInit {
   find;
+  page : any;
   itemsPerPage = 3;
   p: number = 1;
   students = [
