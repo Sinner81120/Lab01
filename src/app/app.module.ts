@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RatingModule } from 'ng-starrating';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { Bai2Component } from './bai2/bai2.component';
 import { Bai3Component } from './bai3/bai3.component';
 import { Bai5Component } from './bai5/bai5.component';
 import { DetailComponent } from './detail/detail.component';
+import { SinhvienComponent } from './sinhvien/sinhvien.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { DetailComponent } from './detail/detail.component';
     Bai2Component,
     Bai3Component,
     Bai5Component,
-    DetailComponent
+    DetailComponent,
+    SinhvienComponent
   ],
   imports: [
     BrowserModule,
@@ -30,10 +33,11 @@ import { DetailComponent } from './detail/detail.component';
     RatingModule,
     Ng2SearchPipeModule,
     FormsModule,
+    NgxPaginationModule,
     RouterModule.forRoot([
-      {path: 'product', 	component: ProductComponent },
-      {path: 'detail/:productId', 	component: DetailComponent },
-      {path: '**', redirectTo: 'products', pathMatch: 'full' },
+      { path: 'product', component: ProductComponent },
+      { path: 'detail/:productId', component: DetailComponent },
+      { path: '**', redirectTo: 'products', pathMatch: 'full' },
     ])
   ],
   providers: [],

@@ -1,0 +1,43 @@
+<div class="bg-secondary mt-3 pl-4 rounded text-white-50" style="font-size: 24px; line-height: 50px;">
+    Home / Student
+</div>
+<div class="card mt-5">
+    <div class="card-header"><i class='fas fa-table' style='font-size:20px'> </i> Danh sách sinh viên</div>
+    <div class="card-body">
+        <div class="input-group mb-3" style="width: 350px;">
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="find">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">EnrollDate</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students | filter:find | paginate: { itemsPerPage: 3, currentPage: p, totalItems: total }">
+                    <td>{{student.lastName}}</td>
+                    <td>{{student.firstName}}</td>
+                    <td>{{student.enrollmentDate}}</td>
+                    <td>
+                        <i class="fas fa-exclamation text-primary"></i>
+                        <i class="fas fa-trash-alt text-danger pl-3" (click)="DeleteStudent(student.id)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-6">Showing {{p}} of {{total / itemsPerPage | number:"1.0-0"}} </div>
+            <div class="col-6">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>
