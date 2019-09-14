@@ -20,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let student of students | filter:find | paginate: { itemsPerPage: 3, currentPage: p, totalItems: total }">
+                <tr *ngFor="let student of students | filter:find | paginate: { itemsPerPage: 3, currentPage: p,}">
                     <td>{{student.lastName}}</td>
                     <td>{{student.firstName}}</td>
                     <td>{{student.enrollmentDate}}</td>
