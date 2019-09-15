@@ -76,5 +76,6 @@ export class DetailComponent implements OnInit {
   addToCart(){
     let appProduct = Object.assign(this.product,{'quality':1});
     this.cart.addToCart(appProduct);
+    alert("Sản phẩm đã được thêm vào giỏ hàng của bạn.")
   }
 }

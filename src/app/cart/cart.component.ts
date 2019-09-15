@@ -7,6 +7,12 @@ import {CartServiceService} from '../cart-service.service'
 })
 export class CartComponent implements OnInit {
   items= [];
+  Clear(){
+    let Choose = confirm("Do you want to clear your cart ??")
+    if(Choose){
+      this.items = this.cart.clearCart();
+    }
+  }
   Buy(){
     alert("Mua hàng thành công");
     this.items = this.cart.clearCart();
