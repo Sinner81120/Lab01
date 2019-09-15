@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
   searchText;
-  show = false;
-  buttonName = 'Show';
+  show = true;
+  buttonName = 'Hide';
   products = [
     {
         "productId": 1,

@@ -1,0 +1,36 @@
+<button class="btn btn-primary" routerLink="/product">Product</button>
+<div class="card mt-3">
+    <div class="card-header bg-primary text-white">Your Cart</div>
+    <div class="card-body">
+        <div class="table" >
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"> Image</th>
+                        <th scope="col">Products</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Available</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">5 Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of items | filter:searchText">
+                        <td ><img src="{{product.imageUrl}}" width="50px" height="auto"></td>
+                        <td>{{product.productName}}</td>
+                        <td>{{product.productCode}}</td>
+                        <td>{{product.releaseDate}}</td>
+                        <td>{{product.price}}</td>
+                        <td>
+                            <star-rating value="{{product.starRating}}" checkedcolor="black" uncheckedcolor="grey"
+                                size="24px"></star-rating>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-success float-right" (click)="Buy()">Buy</button>
+    </div>
+</div>

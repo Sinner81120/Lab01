@@ -1,4 +1,5 @@
-<div class="card mt-5">
+<button class="btn btn-primary mt-5" routerLink="/cart"><i class="fas fa-shopping-cart"></i></button>
+<div class="card mt-3">
     <div class="card-header bg-primary text-white">Product list</div>
     <div class="card-body">
         <form>
@@ -16,22 +17,15 @@
                         <th scope="col">Code</th>
                         <th scope="col">Available</th>
                         <th scope="col">Price</th>
-                        <th scope="col">5 Star Rating</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let product of products | filter:searchText">
-                        <td *ngIf="show, else hide"><img src="{{product.imageUrl}}"></td>
-                        <ng-template #hide>
-                            <td></td>
-                        </ng-template>
+                        <td><img src="{{product.imageUrl}}"></td>
                         <td><a [routerLink]="['/detail',product.productId]">{{product.productName}}</a></td>
                         <td>{{product.productCode}}</td>
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price}}</td>
-                        <td>
-                            <star-rating value="{{product.starRating}}" checkedcolor="black" uncheckedcolor="grey" size="24px"></star-rating>
-                        </td>
                     </tr>
                 </tbody>
             </table>

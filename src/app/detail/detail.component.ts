@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import {CartServiceService} from '../cart-service.service'
 
 @Component({
   selector: 'app-detail',
@@ -62,8 +63,8 @@ export class DetailComponent implements OnInit {
       "imageUrl": "../../assets/vg-controller.jpg"
     },
 ];
-  constructor(private route: ActivatedRoute, private location : Location) { }
-  fuck() {
+  constructor(private route: ActivatedRoute, private location : Location, private cart:CartServiceService) { }
+  Goback() {
     this.location.back();
   }
   ngOnInit() {
@@ -72,5 +73,8 @@ export class DetailComponent implements OnInit {
     });
     this.product=this.products.find(p => p.productId == this.pid);
   }
-
+  addToCart(){
+    let appProduct = Object.assign(this.product,{'quality':1});
+    this.cart.addToCart(appProduct);
+  }
 }

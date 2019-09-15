@@ -17,6 +17,7 @@ import { DetailComponent } from './detail/detail.component';
 import { SinhvienComponent } from './sinhvien/sinhvien.component';
 import { DetailsinhvienComponent } from './detailsinhvien/detailsinhvien.component';
 import { ControllComponent } from './controll/controll.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ControllComponent } from './controll/controll.component';
     DetailComponent,
     SinhvienComponent,
     DetailsinhvienComponent,
-    ControllComponent
+    ControllComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { ControllComponent } from './controll/controll.component';
     FormsModule,
     NgxPaginationModule,
     RouterModule.forRoot([
+      {path:'cart',component: CartComponent},
       { path: 'home', component: ControllComponent },
       { path: 'bai1', component: Bai1Component },
       { path: 'bai2', component: Bai2Component },
