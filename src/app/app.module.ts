@@ -16,6 +16,7 @@ import { Bai5Component } from './bai5/bai5.component';
 import { DetailComponent } from './detail/detail.component';
 import { SinhvienComponent } from './sinhvien/sinhvien.component';
 import { DetailsinhvienComponent } from './detailsinhvien/detailsinhvien.component';
+import { ControllComponent } from './controll/controll.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DetailsinhvienComponent } from './detailsinhvien/detailsinhvien.compone
     Bai5Component,
     DetailComponent,
     SinhvienComponent,
-    DetailsinhvienComponent
+    DetailsinhvienComponent,
+    ControllComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,11 @@ import { DetailsinhvienComponent } from './detailsinhvien/detailsinhvien.compone
     FormsModule,
     NgxPaginationModule,
     RouterModule.forRoot([
-      { path: '', component: SinhvienComponent },
+      { path: 'home', component: ControllComponent },
+      { path: 'bai1', component: Bai1Component },
+      { path: 'bai2', component: Bai2Component },
+      { path: 'bai3', component: Bai3Component },
+      { path: 'bai5', component: Bai5Component },
       { path: 'product', component: ProductComponent },
       { path: 'detail/:productId', component: DetailComponent },
       { path: 'sinhvien', component: SinhvienComponent },
