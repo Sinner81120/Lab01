@@ -34,7 +34,7 @@
     </div>
     <div class="card-footer">
         <div class="row">
-            <div class="col-6">Showing {{p}} of 3 </div>
+            <div class="col-6">Showing {{p}} of {{(totalpage+1)/itemsPerPage | number:"1.0-0"}} </div>
             <div class="col-6">
                 <pagination-controls (pageChange)="p = $event"></pagination-controls>
             </div>

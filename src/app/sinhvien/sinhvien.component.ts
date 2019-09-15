@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SinhvienComponent implements OnInit {
   find;
+  itemsPerPage : number = 3;
   p: number = 1;
   students = [
     {
@@ -59,6 +60,7 @@ export class SinhvienComponent implements OnInit {
       enrollmentDate: "2005-09-01"
     }
   ];
+  totalpage = this.students.length;
   constructor() {
   }
   ngOnInit() {
@@ -66,6 +68,7 @@ export class SinhvienComponent implements OnInit {
   DeleteStudent(id) {
     let yes = confirm("Bạn có muốn xóa học sinh này ??")
     if (yes) {
+      --this.totalpage;
       let sd = this.students.filter(student => {
           return student.id !== id
         }
