@@ -7,7 +7,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsinhvienComponent implements OnInit {
   student: any;
-  sd;
+  course ={};
+  sd: any;
+  id: any;
   students = [
     {
       id: 1,
@@ -162,8 +164,24 @@ export class DetailsinhvienComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(para => {
-    this.sd = para.get('lastName');
-  });
-  this.student = this.students.find(p => p.lastName = this.sd)
-}
+      this.sd = para.get('lastName');
+    });
+    this.student = this.students.find(p => p.lastName = this.sd);
+    // Hàm tìm id từ tên sv
+    for (let i = 0; i < this.students.length; ++i) {
+      if (this.sd == this.students[i].lastName) {
+        this.id = this.students[i].id;
+      }
+    }
+    let enrollment = this.enrollments.filter(enrollment => {
+      return enrollment.StudentID == this.id;
+    })
+    this.enrollments = enrollment;
+    //Tìm data cho table
+    for (let i = 0; i < this.enrollments.length; ++i) {
+      this.course[this.enrollments[i].CourseID] = this.courses.filter(course => {
+        return course.CourseID === this.enrollments[i].CourseID
+      })[0];
+    }
+  }
 }
