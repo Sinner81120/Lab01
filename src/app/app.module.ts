@@ -15,6 +15,7 @@ import { Bai3Component } from './bai3/bai3.component';
 import { Bai5Component } from './bai5/bai5.component';
 import { DetailComponent } from './detail/detail.component';
 import { SinhvienComponent } from './sinhvien/sinhvien.component';
+import { DetailsinhvienComponent } from './detailsinhvien/detailsinhvien.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SinhvienComponent } from './sinhvien/sinhvien.component';
     Bai3Component,
     Bai5Component,
     DetailComponent,
-    SinhvienComponent
+    SinhvienComponent,
+    DetailsinhvienComponent
   ],
   imports: [
     BrowserModule,
@@ -35,8 +37,11 @@ import { SinhvienComponent } from './sinhvien/sinhvien.component';
     FormsModule,
     NgxPaginationModule,
     RouterModule.forRoot([
+      { path: '', component: SinhvienComponent },
       { path: 'product', component: ProductComponent },
       { path: 'detail/:productId', component: DetailComponent },
+      { path: 'sinhvien', component: SinhvienComponent },
+      { path: 'detailsinhvien/:lastName', component: DetailsinhvienComponent },
       { path: '**', redirectTo: 'products', pathMatch: 'full' },
     ])
   ],

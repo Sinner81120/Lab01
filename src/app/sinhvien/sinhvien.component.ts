@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SinhvienComponent implements OnInit {
   find;
-  itemsPerPage : number = 3;
+  itemsPerPage: number = 3;
   p: number = 1;
   students = [
     {
@@ -70,8 +70,8 @@ export class SinhvienComponent implements OnInit {
     if (yes) {
       --this.totalpage;
       let sd = this.students.filter(student => {
-          return student.id !== id
-        }
+        return student.id !== id
+      }
       )
       this.students = sd;
     }

@@ -25,7 +25,7 @@
                     <td>{{student.firstName}}</td>
                     <td>{{student.enrollmentDate}}</td>
                     <td>
-                        <i class="fas fa-exclamation text-primary"></i>
+                        <a [routerLink]="['/detailsinhvien',student.lastName]"><i class="fas fa-exclamation text-primary"></i></a>
                         <i class="fas fa-trash-alt text-danger pl-3" (click)="DeleteStudent(student.id)"></i>
                     </td>
                 </tr>
