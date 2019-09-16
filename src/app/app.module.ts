@@ -8,16 +8,16 @@ import { NgxPaginationModule } from 'ngx-pagination'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { Bai1Component } from './bai1/bai1.component';
-import { Bai2Component } from './bai2/bai2.component';
-import { Bai3Component } from './bai3/bai3.component';
-import { Bai5Component } from './bai5/bai5.component';
-import { DetailComponent } from './detail/detail.component';
-import { SinhvienComponent } from './sinhvien/sinhvien.component';
-import { DetailsinhvienComponent } from './detailsinhvien/detailsinhvien.component';
+import { ProductComponent } from '../app/Lab01/product/product.component';
+import { Bai1Component } from '../app/Lab01/bai1/bai1.component';
+import { Bai2Component } from '../app/Lab01/bai2/bai2.component';
+import { Bai3Component } from '../app/Lab01/bai3/bai3.component';
+import { Bai5Component } from '../app/Lab01/bai5/bai5.component';
+import { DetailComponent } from '../app/Lab01/detail/detail.component';
+import { SinhvienComponent } from '../app/Lab02/sinhvien/sinhvien.component';
+import { DetailsinhvienComponent } from '../app/Lab02/detailsinhvien/detailsinhvien.component';
 import { ControllComponent } from './controll/controll.component';
-import { CartComponent } from './cart/cart.component';
+import { CartComponent } from '../app/Lab01/cart/cart.component';
 
 @NgModule({
   declarations: [

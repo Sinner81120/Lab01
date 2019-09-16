@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
         "description": "Leaf rake with 48-inch wooden handle.",
         "price": 19.95,
         "starRating": 3.2,
-        "imageUrl": "../../assets/leaf-rake.jpg"
+        "imageUrl": "../../../assets/leaf-rake.jpg"
     },
     {
         "productId": 2,
@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit {
         "description": "15 gallon capacity rolling garden cart",
         "price": 32.99,
         "starRating": 4.2,
-        "imageUrl": "../../assets/garden-cart.jpg"
+        "imageUrl": "../../../assets/garden-cart.jpg"
     },
     {
         "productId": 5,
@@ -38,7 +38,7 @@ export class ProductComponent implements OnInit {
         "description": "Curved claw steel hammer",
         "price": 8.9,
         "starRating": 4.8,
-        "imageUrl": "../../assets/hammer.jpg"
+        "imageUrl": "../../../assets/hammer.jpg"
     },
     {
         "productId": 8,
@@ -48,7 +48,7 @@ export class ProductComponent implements OnInit {
         "description": "15-inch steel blade hand saw",
         "price": 11.55,
         "starRating": 3.7,
-        "imageUrl": "../../assets/saw.jpg"
+        "imageUrl": "../../../assets/saw.jpg"
     },
     {
         "productId": 10,
@@ -58,7 +58,7 @@ export class ProductComponent implements OnInit {
         "description": "Standard two-button video game controller",
         "price": 35.95,
         "starRating": 4.6,
-        "imageUrl": "../../assets/vg-controller.jpg"
+        "imageUrl": "../../../assets/vg-controller.jpg"
     },
 ];
   constructor() { }

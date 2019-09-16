@@ -39,25 +39,25 @@ export class Bai3Component implements OnInit {
   products = [
     {
       id: "pd100",
-      image: "../../assets/Ram1.jpg",
+      image: "../../../assets/Ram1.jpg",
       name:"Ram máy tính",
       price:400000,
     },
     {
       id: "pd101",
-      image: "../../assets/Case1.jpg",
+      image: "../../../assets/Case1.jpg",
       name:"Case - Thùng máy",
       price:600000,
     },
     {
       id: "pd102",
-      image: "../../assets/C1.jpg",
+      image: "../../../assets/C1.jpg",
       name:"Card đồ họa",
       price:16000000,
     },
     {
       id: "pd103",
-      image: "../../assets/PC1.png",
+      image: "../../../assets/PC1.png",
       name:"PC Gaming",
       price:32300000,
     }
