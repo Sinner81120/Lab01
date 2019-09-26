@@ -36,6 +36,16 @@ export class Bai3Component implements OnInit {
     }
     return total;
   };
+  Delete(id){
+    let yes = confirm("Bạn có muốn  xóa sản phẩm này này ??")
+    if (yes) {
+      let sd = this.products.filter(student => {
+        return student.id !== id
+      }
+      )
+      this.products = sd;
+    }
+  }
   products = [
     {
       id: "pd100",
