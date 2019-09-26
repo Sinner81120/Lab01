@@ -48,6 +48,7 @@ import { Lab04Component } from './Lab04/lab04/lab04.component';
     OrderModule,
     RouterModule.forRoot([
       { path: 'cart', component: CartComponent },
+      { path: 'lab04', component: Lab04Component },
       { path: 'home', component: ControllComponent },
       { path: 'bai1', component: Bai1Component },
       { path: 'bai2', component: Bai2Component },
