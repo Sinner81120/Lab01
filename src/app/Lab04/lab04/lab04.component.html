@@ -31,8 +31,8 @@
                 <tr
                     *ngFor=" let product of list | paginate : { itemsPerPage: 8, currentPage: p } | orderBy: order : reverse">
                     <td>{{product.name}}</td>
-                    <td>{{product.price | currency : 'money'}}</td>
-                    <td>{{product.discount | number : '1.0-2'}}</td>
+                    <td>{{product.price | currency : '$'}}</td>
+                    <td>{{product.discount}}</td>
                     <td>{{product.date}}</td>
                 </tr>
             </tbody>
