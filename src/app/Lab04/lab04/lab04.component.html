@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-header">Danh sách hàng hóa</div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-light">
+                    <th [class.active]="order === 'name'" (click)="setOrder('name')">
+                        Sản phẩm
+                        <span [hidden]="reverse">▼</span>
+                        <span [hidden]="!reverse">▲</span>
+                    </th>
+                    <th [class.active]="order === 'price'" (click)="setOrder('price')">
+                        Đơn giá
+                        <span [hidden]="reverse">▼</span>
+                        <span [hidden]="!reverse">▲</span>
+                    </th>
+                    <th [class.active]="order === 'discount'" (click)="setOrder('discount')">
+                        Giảm giá
+                        <span [hidden]="reverse">▼</span>
+                        <span [hidden]="!reverse">▲</span>
+                    </th>
+                    <th [class.active]="order === 'date'" (click)="setOrder('date')">
+                        Ngày
+                        <span [hidden]="reverse">▼</span>
+                        <span [hidden]="!reverse">▲</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor=" let product of list | paginate : { itemsPerPage: 8, currentPage: p } | orderBy: order:reverse:'case-insensitive'">
+                    <td>{{product.name}}</td>
+                    <td>{{product.price | currency : money}}</td>
+                    <td>{{product.discount | number : '1.0-2'}}</td>
+                    <td>{{product.date}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        <div class="float-right">
+            <button class="btn btn-primary" (click)='Up()'><i class="fas fa-angle-double-up"></i></button>
+            <button class="btn btn-primary" (click)='Previous()'><i class="fas fa-angle-double-left"></i></button>
+            <button class="btn btn-primary" (click)='Next()'><i class="fas fa-angle-double-right"></i></button>
+            <button class="btn btn-primary" (click)='Down()'><i class="fas fa-angle-double-down"></i></button>
+        </div>
+        <div class="float-left">Show {{p}} of {{totalpage}}</div>
+    </div>

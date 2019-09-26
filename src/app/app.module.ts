@@ -4,7 +4,8 @@ import { RatingModule } from 'ng-starrating';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { NgxPaginationModule } from 'ngx-pagination'
+import { NgxPaginationModule } from 'ngx-pagination';
+import { OrderModule } from 'ngx-order-pipe'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,8 @@ import { SinhvienComponent } from '../app/Lab02/sinhvien/sinhvien.component';
 import { DetailsinhvienComponent } from '../app/Lab02/detailsinhvien/detailsinhvien.component';
 import { ControllComponent } from './controll/controll.component';
 import { CartComponent } from '../app/Lab01/cart/cart.component';
+import { GiaodienComponent } from './Lab03/giaodien/giaodien.component';
+import { Lab04Component } from './Lab04/lab04/lab04.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { CartComponent } from '../app/Lab01/cart/cart.component';
     SinhvienComponent,
     DetailsinhvienComponent,
     ControllComponent,
-    CartComponent
+    CartComponent,
+    GiaodienComponent,
+    Lab04Component
   ],
   imports: [
     BrowserModule,
@@ -40,8 +45,9 @@ import { CartComponent } from '../app/Lab01/cart/cart.component';
     Ng2SearchPipeModule,
     FormsModule,
     NgxPaginationModule,
+    OrderModule,
     RouterModule.forRoot([
-      {path:'cart',component: CartComponent},
+      { path: 'cart', component: CartComponent },
       { path: 'home', component: ControllComponent },
       { path: 'bai1', component: Bai1Component },
       { path: 'bai2', component: Bai2Component },
