@@ -1,0 +1,15 @@
+#Lan{
+    padding-left: 320px;
+}
+#cart{
+    padding-left: 10px;
+    width: 100px;
+    height: auto;
+}
+input{
+    margin: 20px;
+    width: 210px;
+}
+a{
+    text-decoration: none;
+}

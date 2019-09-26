@@ -1,6 +1,6 @@
 <div class="row">
-    <img src="../../assets/images/Logo.JPG" class="col-6">
-    <img src="../../assets/images/header-object.png" class="col-6">
+    <img src="../../../assets/giaodien/Logo.JPG" class="col-6">
+    <img src="../../../assets/giaodien/header-object.png" class="col-6">
 </div>
 <div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded">
@@ -33,11 +33,54 @@
     </nav>
     <div class="row mt-4">
         <div class="col-9">
-            <router-outlet></router-outlet>
+            <div id="intro" class="bg-secondary pl-3 rounded text-white-50 mt-2 pt-2">
+                <p style="font-size: 30px; font-style:italic">Font-end FrameWord</p>
+                In the web development world, you encounter the terms “front-end” and “back-end” pretty frequently. Just
+                to refresh, front-end development is all about the parts of a website that users see, while the back-end
+                is more about the “behind the scenes” functionality.
+
+                Using a framework to construct your website’s front-end has a lot of advantages (and is pretty easy to
+                boot!). Let’s go over what front-end frameworks are and why you should consider incorporating them into
+                your web development work.
+                <br>
+                <button class="btn btn-primary mb-3"> Xem thêm ...</button>
+            </div>
+
+
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../../../assets/giaodien/products/1025.jpg" width="100%" height="500px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../../assets/giaodien/products/1002.jpg" width="100%" height="500px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../../assets/giaodien/products/1008.jpg" width="100%" height="500px">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
         </div>
         <div class="col-3">
             <div class="border rounded">
-                <img src="../../assets/images/shoppingcart.gif" id="cart">
+                <img src="../../../assets/giaodien/shoppingcart.gif" id="cart">
                 <div class="float-right mr-5">
                     Số items <br>
                     Tổng tiền <br>
@@ -56,7 +99,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let title of titles">
-                            <td><a [routerLink]="['/product',title.loai]" > {{title.title}} </a></td>
+                            <td><a [routerLink]="['/product',title.loai]"> {{title.title}} </a></td>
                         </tr>
                     </tbody>
                 </table>
