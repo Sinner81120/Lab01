@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor=" let product of list | paginate : { itemsPerPage: 8, currentPage: p } | orderBy: order:reverse:'case-insensitive'">
+                <tr *ngFor=" let product of list | paginate : { itemsPerPage: 8, currentPage: p } | orderBy: order : reverse : caseInsensitive">
                     <td>{{product.name}}</td>
                     <td>{{product.price | currency : 'money'}}</td>
                     <td>{{product.discount | number : '1.0-2'}}</td>
