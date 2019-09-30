@@ -21,6 +21,9 @@ import { ControllComponent } from './controll/controll.component';
 import { CartComponent } from '../app/Lab01/cart/cart.component';
 import { GiaodienComponent } from './Lab03/giaodien/giaodien.component';
 import { Lab04Component } from './Lab04/lab04/lab04.component';
+import { Lab05Component } from './Lab05/lab05/lab05.component';
+import { Lab051Component } from './Lab05/lab051/lab051.component';
+import { Lao052Component } from './Lab05/lao052/lao052.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { Lab04Component } from './Lab04/lab04/lab04.component';
     ControllComponent,
     CartComponent,
     GiaodienComponent,
-    Lab04Component
+    Lab04Component,
+    Lab05Component,
+    Lab051Component,
+    Lao052Component
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,10 @@ import { Lab04Component } from './Lab04/lab04/lab04.component';
     NgxPaginationModule,
     OrderModule,
     RouterModule.forRoot([
+      { path: 'lab05-3', component: Lao052Component },
       { path: 'cart', component: CartComponent },
+      { path: 'lab05-1', component: Lab05Component },
+      { path: 'lab05-2', component: Lab051Component },
       { path: 'lab04', component: Lab04Component },
       { path: 'giaodien', component: GiaodienComponent },
       { path: 'home', component: ControllComponent },

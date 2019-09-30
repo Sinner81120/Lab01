@@ -1,0 +1,22 @@
+<form>
+    <div class="form-group">
+        <label for="wretangle">Họ và tên</label>
+            <input type="text" class="form-control" [(ngModel)]="hs.name" [ngModelOptions]="{standalone: true}">
+        <label for="wretangle">Ngày sinh</label>
+            <input type="text" class="form-control" [(ngModel)]="hs.date" [ngModelOptions]="{standalone: true}">
+        <label for="wretangle">Giới tính</label>
+            <select class="form-control">
+            <option value="">Nam</option>
+            <option value="">Nữ</option>
+        </select>
+        <label for="wretangle">Điểm</label>
+            <input type="number" class="form-control" [(ngModel)]="hs.diem" [ngModelOptions]="{standalone: true}"max="10"
+            min="0">
+        <label for="wretangle">Học lực</label>
+            <div class="alert alert-success ">
+            {{hs.status}}
+        </div>
+        <br>
+        <button class="btn btn-primary" (click)="Tinhhl()">Tính</button>
+    </div>
+</form>
