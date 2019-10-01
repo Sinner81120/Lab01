@@ -28,7 +28,6 @@ export class Lao052Component implements OnInit {
     }
   ]
   constructor() {
-    console.log(this.nv.gender)
   }
 
   ngOnInit() {
