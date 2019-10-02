@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Lao052Component implements OnInit {
   nv = {
     name: null,
-    luong: null,
+    salary: null,
     gender: null,
     age: null,
     rate: null,
@@ -34,10 +34,12 @@ export class Lao052Component implements OnInit {
 
   }
   Tinhluong() {
-    let i = this.nv.luong * this.nv.rate;
+    let i = this.nv.salary * this.nv.rate;
     if (this.nv.gender == "Nữ") {
       i = i + 200000;
     }
     return i;
   }
+  
+
 }

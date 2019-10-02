@@ -1,1 +1,33 @@
-<p>lab053 works!</p>
+<div class="card mt-2">
+    <div class="card-header bg-light">BÁN HÀNG GIẢI KHÁT</div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>TÊN HÀNG</th>
+                    <th>SỐ LƯỢNG</th>
+                    <th>ĐƠN GIÁ</th>
+                    <th>THÀNH TIỀN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listitems">
+                    <td>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                        </div>
+                        {{item.name}}
+                    </td>
+                    <td>
+                        <input type="number" max="1000" min="0" [(ngModel)]="item.amount" [ngModelOptions]="{standalone: true}" >
+                    </td>
+                    <td>{{item.price | currency : 'VND'}}</td>
+                    <td>{{item.amount * item.price | currency : 'VND'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">{{Total()}}</div>
+</div>

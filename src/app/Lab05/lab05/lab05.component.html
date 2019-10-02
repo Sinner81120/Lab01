@@ -1,13 +1,14 @@
-<form>
+<form class="mt-2">
     <div class="form-group">
         <label for="wretangle">Chiều dài</label>
             <input type="number" class="form-control" [(ngModel)]="hcn.cd" [ngModelOptions]="{standalone: true}">
         <label for="wretangle">Chiều rộng</label>
             <input type="number" class="form-control" [(ngModel)]="hcn.cr" [ngModelOptions]="{standalone: true}">
         <label for="wretangle">Chu vi</label>
-            <input type="number" class="form-control" [(ngModel)]="hcn.P" [ngModelOptions]="{standalone: true}">
+            <input type="number" class="form-control" [(ngModel)]="hcn.P" [ngModelOptions]="{standalone: true}" disabled>
         <label for="wretangle">Diện tích</label>
-            <input type="number" class="form-control" [(ngModel)]="hcn.S" [ngModelOptions]="{standalone: true}">
-        <button class="btn btn-primary" (click)="Tinh()">Tính</button>
+            <input type="number" class="form-control" [(ngModel)]="hcn.S" [ngModelOptions]="{standalone: true}" disabled>
+        <br>
+        <button class="btn btn-primary" (click)="Tinh()">Calculate</button>
     </div>
 </form>

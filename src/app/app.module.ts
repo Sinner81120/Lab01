@@ -24,6 +24,7 @@ import { Lab04Component } from './Lab04/lab04/lab04.component';
 import { Lab05Component } from './Lab05/lab05/lab05.component';
 import { Lab051Component } from './Lab05/lab051/lab051.component';
 import { Lao052Component } from './Lab05/lao052/lao052.component';
+import { Lab053Component } from './Lab05/lab053/lab053.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { Lao052Component } from './Lab05/lao052/lao052.component';
     Lab04Component,
     Lab05Component,
     Lab051Component,
-    Lao052Component
+    Lao052Component,
+    Lab053Component
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,7 @@ import { Lao052Component } from './Lab05/lao052/lao052.component';
     OrderModule,
     RouterModule.forRoot([
       { path: 'lab05-3', component: Lao052Component },
+      { path: 'lab05-4', component: Lab053Component },
       { path: 'cart', component: CartComponent },
       { path: 'lab05-1', component: Lab05Component },
       { path: 'lab05-2', component: Lab051Component },
