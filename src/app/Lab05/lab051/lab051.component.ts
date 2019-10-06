@@ -7,19 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Lab051Component implements OnInit {
   hs = {
-    name : null,
-    date : null,
-    diem : null,
-    status : null,
+    name: null,
+    date: null,
+    diem: null,
+    status: null,
   }
   constructor() { }
 
   ngOnInit() {
   }
-  Tinhhl(){
-    if(this.hs.diem < 5){
-      this.hs.status = "Rớt";
+  Tinhhl() {
+    if (this.hs.diem && this.hs.date && this.hs.name) {
+      if (this.hs.diem < 5) {
+        this.hs.status = "Rớt";
+      }
+      else if (this.hs.diem >= 5) this.hs.status = "Đậu";
     }
-    else  this.hs.status = "Đậu";
   }
 }

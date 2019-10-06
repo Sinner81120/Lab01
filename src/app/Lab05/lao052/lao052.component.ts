@@ -9,7 +9,7 @@ export class Lao052Component implements OnInit {
   nv = {
     name: null,
     salary: null,
-    gender: null,
+    gender: "Nữ",
     age: null,
     rate: null,
   }
@@ -34,12 +34,14 @@ export class Lao052Component implements OnInit {
 
   }
   Tinhluong() {
-    let i = this.nv.salary * this.nv.rate;
-    if (this.nv.gender == "Nữ") {
-      i = i + 200000;
+    if (this.nv.name && this.nv.salary >= 2000000 && this.nv.gender) {
+      let i = this.nv.salary * this.nv.rate;
+      if (this.nv.gender == "Nữ") {
+        i = i + 200000;
+      }
+      return i;
     }
-    return i;
   }
-  
+
 
 }

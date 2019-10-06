@@ -15,14 +15,14 @@
                     <td>
                         <div class="form-check-inline">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input">
+                                <input type="checkbox" class="form-check-input" [(ngModel)]='item.checked' >
                             </label>
                         </div>
                         {{item.name}}
                     </td>
                     <td>
                         <input type="number" max="1000" min="0" [(ngModel)]="item.amount"
-                            [ngModelOptions]="{standalone: true}">
+                            [ngModelOptions]="{standalone: true}" [disabled]="!item.checked">
                     </td>
                     <td>{{item.price | currency : 'VND'}}</td>
                     <td>{{item.amount * item.price | currency : 'VND'}}</td>

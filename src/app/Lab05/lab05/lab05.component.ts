@@ -17,7 +17,10 @@ export class Lab05Component implements OnInit {
   ngOnInit() {
   }
   Tinh() {
+    if(this.hcn.cd && this.hcn.cr){
     this.hcn.S = this.hcn.cd * this.hcn.cr;
     this.hcn.P = (this.hcn.cd +this.hcn.cr)*2;
+    }
+    else alert('Vui lòng nhập đầy đủ thông tin')
   }
 }
