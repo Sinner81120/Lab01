@@ -21,7 +21,8 @@
                         {{item.name}}
                     </td>
                     <td>
-                        <input type="number" max="1000" min="0" [(ngModel)]="item.amount" [ngModelOptions]="{standalone: true}" >
+                        <input type="number" max="1000" min="0" [(ngModel)]="item.amount"
+                            [ngModelOptions]="{standalone: true}">
                     </td>
                     <td>{{item.price | currency : 'VND'}}</td>
                     <td>{{item.amount * item.price | currency : 'VND'}}</td>
@@ -29,5 +30,5 @@
             </tbody>
         </table>
     </div>
-    <div class="card-footer">{{Total()}}</div>
+    <div class="card-footer">TỔNG TIỀN: {{Total()}}đ</div>
 </div>
