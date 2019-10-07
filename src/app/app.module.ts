@@ -5,7 +5,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { OrderModule } from 'ngx-order-pipe'; 
+import { OrderModule } from 'ngx-order-pipe';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,8 @@ import { Lab05Component } from './Lab05/lab05/lab05.component';
 import { Lab051Component } from './Lab05/lab051/lab051.component';
 import { Lao052Component } from './Lab05/lao052/lao052.component';
 import { Lab053Component } from './Lab05/lab053/lab053.component';
+import { ListFilmComponent } from './Lab06/list-film/list-film.component';
+import { DetailFilmComponent } from './Lab06/detail-film/detail-film.component';
 
 @NgModule({
   declarations: [
@@ -44,10 +47,13 @@ import { Lab053Component } from './Lab05/lab053/lab053.component';
     Lab05Component,
     Lab051Component,
     Lao052Component,
-    Lab053Component
+    Lab053Component,
+    ListFilmComponent,
+    DetailFilmComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RatingModule,
     Ng2SearchPipeModule,
@@ -57,6 +63,8 @@ import { Lab053Component } from './Lab05/lab053/lab053.component';
     RouterModule.forRoot([
       { path: 'lab05-3', component: Lao052Component },
       { path: 'lab05-4', component: Lab053Component },
+      { path: 'listfilm', component: ListFilmComponent },
+      { path: 'filmdetail/:url', component: DetailFilmComponent },
       { path: 'cart', component: CartComponent },
       { path: 'lab05-1', component: Lab05Component },
       { path: 'lab05-2', component: Lab051Component },
