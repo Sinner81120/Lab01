@@ -28,6 +28,7 @@ import { Lao052Component } from './Lab05/lao052/lao052.component';
 import { Lab053Component } from './Lab05/lab053/lab053.component';
 import { ListFilmComponent } from './Lab06/list-film/list-film.component';
 import { DetailFilmComponent } from './Lab06/detail-film/detail-film.component';
+import { Lab07Component } from './lab07/lab07.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { DetailFilmComponent } from './Lab06/detail-film/detail-film.component';
     Lao052Component,
     Lab053Component,
     ListFilmComponent,
-    DetailFilmComponent
+    DetailFilmComponent,
+    Lab07Component
   ],
   imports: [
     BrowserModule,
@@ -61,6 +63,7 @@ import { DetailFilmComponent } from './Lab06/detail-film/detail-film.component';
     NgxPaginationModule,
     OrderModule,
     RouterModule.forRoot([
+      { path: 'lab07', component: Lab07Component },
       { path: 'lab05-3', component: Lao052Component },
       { path: 'lab05-4', component: Lab053Component },
       { path: 'listfilm', component: ListFilmComponent },
