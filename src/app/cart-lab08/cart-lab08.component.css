@@ -1,0 +1,10 @@
+#header{
+    border-bottom: 1px solid black;
+}
+footer{
+    border-top: 1px solid black;
+}
+h1{
+    font-family : 'Times New Roman',Times,serif;
+    margin-left : 8%;
+}

@@ -1,0 +1,42 @@
+<div id="header">
+    <h1>My Guitar Shop</h1>
+</div>
+<div id="Content">
+    <button class="btn btn-outline-primary" routerLink='/lab08'>Home</button>
+    <h2 style="text-align: center;">Your cart</h2>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let item of items'>
+                <td>
+                    <img src="{{item.url}}" width="100px" height="100px">
+                </td>
+                <td>{{item.productname}}</td>
+                <td>
+                    <input type="number" min="1" value="{{value[item.id]}}" disabled>
+                    <button class="btn btn-success" (click)="upvalue(item.id)">+</button>
+                    <button class="btn btn-danger" (click)='downvalue(item.id)'>-</button>
+                </td>
+                <td>{{item.price}}</td>
+                <td>
+                    {{item.price*value[item.id]}}
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)='Delete(item.id)'>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<footer>
+    <i class="fab fa-connectdevelop float-right"> 2019 My Guitar Shop, Inc.</i>
+</footer>

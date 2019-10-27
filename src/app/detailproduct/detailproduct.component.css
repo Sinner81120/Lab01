@@ -1,0 +1,29 @@
+h1{
+    font-family : 'Times New Roman',Times,serif;
+    margin-left : 8%;
+}
+#header{
+    border-bottom: 1px solid black;
+}
+footer{
+    border-top: 1px solid black;
+}
+footer>i{
+    margin-right: 2%;
+}
+#cart{
+    border-bottom: 1px solid black;
+}
+.col-2{
+    text-align: right;
+}
+#title{
+    font-size: 20px;
+    color: orange;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h2{
+    color: orange;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -29,6 +29,10 @@ import { Lab053Component } from './Lab05/lab053/lab053.component';
 import { ListFilmComponent } from './Lab06/list-film/list-film.component';
 import { DetailFilmComponent } from './Lab06/detail-film/detail-film.component';
 import { Lab07Component } from './lab07/lab07.component';
+import { Lab08Component } from './lab08/lab08.component';
+import { DetailproductComponent } from './detailproduct/detailproduct.component';
+import { ListcidComponent } from './listcid/listcid.component';
+import { CartLab08Component } from './cart-lab08/cart-lab08.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +55,11 @@ import { Lab07Component } from './lab07/lab07.component';
     Lab053Component,
     ListFilmComponent,
     DetailFilmComponent,
-    Lab07Component
+    Lab07Component,
+    Lab08Component,
+    DetailproductComponent,
+    ListcidComponent,
+    CartLab08Component
   ],
   imports: [
     BrowserModule,
@@ -64,6 +72,10 @@ import { Lab07Component } from './lab07/lab07.component';
     OrderModule,
     RouterModule.forRoot([
       { path: 'lab07', component: Lab07Component },
+      { path: 'cartlab08', component: CartLab08Component },
+      { path: 'lab08/:id', component: DetailproductComponent },
+      { path: 'lab8/:cid', component: ListcidComponent },
+      { path: 'lab08', component: Lab08Component },
       { path: 'lab05-3', component: Lao052Component },
       { path: 'lab05-4', component: Lab053Component },
       { path: 'listfilm', component: ListFilmComponent },
