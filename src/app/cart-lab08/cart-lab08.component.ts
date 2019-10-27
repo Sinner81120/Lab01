@@ -18,6 +18,13 @@ export class CartLab08Component implements OnInit {
       this.value[product.id] = product.quality;
     });
   }
+  Total(){
+    let total = 0;
+    for (let item of this.items) {
+      total += item.price * this.value[item.id]
+    }
+    return total;
+  }
   downvalue(id) {
     let i = this.value[id];
     if (i > 0) {
