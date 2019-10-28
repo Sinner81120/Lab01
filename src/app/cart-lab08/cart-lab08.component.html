@@ -2,7 +2,8 @@
     <h1>My Guitar Shop</h1>
 </div>
 <div id="Content">
-    <button class="btn btn-outline-primary" routerLink='/lab08'>Home</button>
+    <button class="btn btn-outline-primary mr-2" routerLink='/lab08'>Home</button>
+    <button class="btn btn-outline-success" (click)='Clear()'>Clear all items</button>
     <h2 style="text-align: center;">Your cart</h2>
     <table class="table table-hover table-bordered">
         <thead>
@@ -39,6 +40,11 @@
             <tr>
                 <td colspan="5">Total Price</td>
                 <td style="text-align: right">{{Total()}}đ</td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <button class="btn btn-danger float-right" routerLink='/checkout' (click)='Checkout()'>Check out </button>
+                </td>
             </tr>
         </tfoot>
     </table>

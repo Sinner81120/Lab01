@@ -1,5 +1,5 @@
 import {Guitar} from './Guitar';
 export class Items {
-    guitar : Guitar[];
+    guitar : Guitar;
     quality : number
 }

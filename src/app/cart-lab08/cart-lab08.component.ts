@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Cartlab08Service } from '../cartlab08.service'
-import { Items } from '../Items'
 
 @Component({
   selector: 'app-cart-lab08',
@@ -17,6 +16,9 @@ export class CartLab08Component implements OnInit {
     this.items.forEach(product => {
       this.value[product.id] = product.quality;
     });
+  }
+  Clear(){
+    this.items = this.cart.clearCart();
   }
   Total(){
     let total = 0;
@@ -42,11 +44,20 @@ export class CartLab08Component implements OnInit {
   Delete(id) {
     let yes = confirm("Bạn có muốn  xóa sản phẩm này này ??")
     if (yes) {
-      let sd = this.items.filter(student => {
-        return student.id !== id
+      let sd = this.items.filter(item => {
+        return item.id !== id
       }
       )
       this.items = sd;
+    }
+  }
+  Checkout(){
+    for(let item of this.items){
+      for(let itemcart of this.cart.items){
+        if(itemcart.id == item.id){
+          itemcart.quality = this.value[item.id]
+        }
+      }
     }
   }
 }

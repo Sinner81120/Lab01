@@ -12,7 +12,7 @@ import { Cartlab08Service } from '../cartlab08.service'
   styleUrls: ['./detailproduct.component.css']
 })
 export class DetailproductComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private http: HttpClient, private cart : Cartlab08Service) { }
+  constructor(private route: ActivatedRoute, private http: HttpClient, private cart: Cartlab08Service) { }
   product: any;
   listcate: any;
   id;
@@ -27,7 +27,6 @@ export class DetailproductComponent implements OnInit {
     this.getListCate().subscribe(data => {
       this.listcate = data
     })
-    
   }
   getData(): Observable<Guitar[]> {
     return this.http.get<Guitar[]>('../../assets/guitarResource/database/guitar.json')
@@ -35,10 +34,9 @@ export class DetailproductComponent implements OnInit {
   getListCate(): Observable<Categories[]> {
     return this.http.get<Categories[]>('../../assets/guitarResource/database/categories.json')
   }
-
-  addtoCart(){
+  addtoCart() {
     alert('Đã thêm sản phẩm vào giỏ hàng')
-    let item = Object.assign(this.product,{'quality': this.count});
+    let item = Object.assign(this.product, { 'quality': this.count });
     this.cart.addToCart(item)
   }
 }

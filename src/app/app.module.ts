@@ -33,6 +33,7 @@ import { Lab08Component } from './lab08/lab08.component';
 import { DetailproductComponent } from './detailproduct/detailproduct.component';
 import { ListcidComponent } from './listcid/listcid.component';
 import { CartLab08Component } from './cart-lab08/cart-lab08.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { CartLab08Component } from './cart-lab08/cart-lab08.component';
     Lab08Component,
     DetailproductComponent,
     ListcidComponent,
-    CartLab08Component
+    CartLab08Component,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -72,6 +74,7 @@ import { CartLab08Component } from './cart-lab08/cart-lab08.component';
     OrderModule,
     RouterModule.forRoot([
       { path: 'lab07', component: Lab07Component },
+      { path: 'checkout', component: CheckoutComponent },
       { path: 'cartlab08', component: CartLab08Component },
       { path: 'lab08/:id', component: DetailproductComponent },
       { path: 'lab8/:cid', component: ListcidComponent },
