@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "ng-starrating": "^1.0.7",
     "ng2-search-filter": "^0.5.1",
     "ngx-order-pipe": "^2.0.4",
